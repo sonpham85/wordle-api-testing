@@ -36,11 +36,11 @@ class RequestsUtility(object):
 
         return self.rs_json
 
-    def get(self, endpoint, payload=None, headers=None, expected_status_code=200):
+    def get(self, endpoint, headers=None, expected_status_code=200):
         if not headers:
             headers = {"Content-Type": "application/json"}
         self.url = self.base_url + endpoint
-        rs_api = requests.get(url=self.url, data=json.dumps(payload), headers=headers)
+        rs_api = requests.get(url=self.url, headers=headers)
         self.status_code = rs_api.status_code
         self.expected_status_code = expected_status_code
         self.rs_json = self.return_response(rs_api.text)

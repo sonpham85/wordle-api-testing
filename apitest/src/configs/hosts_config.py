@@ -1,7 +1,7 @@
 
 
 API_HOSTS = {
-    "test": "http://localhost:8011/",
+    "test": "https://v1.wordle.k2bd.dev/",
     "dev": "",
     "prod": ""
 }
