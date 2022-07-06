@@ -5,7 +5,3 @@ API_HOSTS = {
     "dev": "",
     "prod": ""
 }
-
-DB_HOSTS ={
-
-}
